@@ -18,12 +18,12 @@ namespace WarheadOnRoundEndExiled
         {
             Log.Info("WarheadOnRoundEndExiled Plugin Aktiviert!");
             Handler = new EventHandler(this);
-            Exiled.Events.Handlers.Server.EndingRound += Handler.OnEndingRoundEvent;
+            Exiled.Events.Handlers.Server.RoundEnded += Handler.OnEndingRoundEvent;
         }
 
         public override void OnDisabled()
         {
-            Exiled.Events.Handlers.Server.EndingRound -= Handler.OnEndingRoundEvent;
+            Exiled.Events.Handlers.Server.RoundEnded -= Handler.OnEndingRoundEvent;
             Handler = null;
         }
 

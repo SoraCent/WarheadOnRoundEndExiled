@@ -14,13 +14,30 @@ namespace WarheadOnRoundEndExiled
         public WarheadOnRoundEndExiled plugin;
         public EventHandler(WarheadOnRoundEndExiled plugin) => this.plugin = plugin;
 
-        public void OnEndingRoundEvent(EndingRoundEventArgs ev)
+        public void OnEndingRoundEvent(RoundEndedEventArgs ev)
         {
-            if (ev.IsAllowed && ev.IsRoundEnded && !Warhead.IsDetonated)
+            if (!Warhead.IsDetonated)
             {
-                Warhead.Start();
-                Warhead.DetonationTimer = 5;
-                Warhead.Shake();
+                UInt32 DetonationTimer = plugin.Config.DetonationTimer;
+                // Checks if the DetonationTimer set in the Config is 0 or lower for instant Detonate.
+                if(DetonationTimer <= 0)
+                {
+                    Warhead.Detonate();
+                }
+                // Checks if the DetonationTimer set in the Config is longer then the RoundRestartTimer.
+                else if(ev.TimeToRestart <= DetonationTimer)
+                {
+                    Warhead.Start();
+                    Warhead.DetonationTimer = 5;
+                    Warhead.Shake();
+                }
+                else
+                {
+
+                    Warhead.Start();
+                    Warhead.DetonationTimer = DetonationTimer;
+                    Warhead.Shake();
+                }
             }
         }
     }
