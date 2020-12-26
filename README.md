@@ -1,6 +1,5 @@
 # WarheadOnRoundEndExiled
-A simple Exiled SCP:SL Plugin that starts the Warhead and detonates it after 5 Seconds when the round ends.
-The Detonation Time can be changed in the Config.
+It's a Simple SCP:SL Plugin for Exiled that activating the Alpha Warhead when the Round is over. The Alpha Warhead Detonates in the Time set in the Config.
 
 # Config:
 | Name | Type | Description | Default |
