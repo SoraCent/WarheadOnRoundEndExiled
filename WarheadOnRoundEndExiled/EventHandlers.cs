@@ -18,26 +18,40 @@ namespace WarheadOnRoundEndExiled
         {
             if (!Warhead.IsDetonated)
             {
-                UInt32 DetonationTimer = plugin.Config.DetonationTimer;
-                // Checks if the DetonationTimer set in the Config is 0 or lower for instant Detonate.
-                if(DetonationTimer <= 0)
+                if(plugin.Config.CustomEndConditionEnabled)
                 {
-                    Warhead.Detonate();
+                    foreach (string FractionsEndCondition in plugin.Config.FractionsEndCondition)
+                    {
+                        if (FractionsEndCondition.Contains(ev.LeadingTeam.ToString()))
+                        {
+                            StartWarhead(ev);
+                        }
+                    }
+                } else
+                {
+                    StartWarhead(ev);
                 }
-                // Checks if the DetonationTimer set in the Config is longer then the RoundRestartTimer.
-                else if(ev.TimeToRestart <= DetonationTimer)
-                {
-                    Warhead.Start();
-                    Warhead.DetonationTimer = 5;
-                    Warhead.Shake();
-                }
-                else
-                {
+            }
+        }
 
-                    Warhead.Start();
-                    Warhead.DetonationTimer = DetonationTimer;
-                    Warhead.Shake();
-                }
+        public void StartWarhead(RoundEndedEventArgs ev)
+        {
+            UInt32 DetonationTimer = plugin.Config.DetonationTimer;
+            // Checks if the DetonationTimer set in the Config is 0 or lower for instant Detonate.
+            if (DetonationTimer <= 0)
+            {
+                Warhead.Detonate();
+            }
+            // Checks if the DetonationTimer set in the Config is longer then the RoundRestartTimer.
+            else if (ev.TimeToRestart <= DetonationTimer)
+            {
+                Warhead.Start();
+                Warhead.DetonationTimer = 5;
+            }
+            else
+            {
+                Warhead.Start();
+                Warhead.DetonationTimer = DetonationTimer;
             }
         }
     }
