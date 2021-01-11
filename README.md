@@ -1,3 +1,5 @@
+[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)[![forthebadge](https://forthebadge.com/images/badges/check-it-out.svg)](https://forthebadge.com)[![forthebadge](https://forthebadge.com/images/badges/made-with-c-sharp.svg)](https://forthebadge.com)
+
 # WarheadOnRoundEndExiled
 It's a Simple SCP:SL Plugin for Exiled that activating the Alpha Warhead when the Round is over and the set Team has Won the Round. The Alpha Warhead Detonates in the Time set in the Config.
 
@@ -31,7 +33,7 @@ warhead_on_round_end_exiled:
 - Anomalies - Triggers when the SCP's won the Round
 - Draw - Triggers when it's a stalemate
 
-How to achieve each Ending you can see this Flowchart https://www.reddit.com/r/SCPSecretLab/comments/gzyl0t/win_condition_flowchart/
+How to achieve each Ending you can see this Flowchart: [Win Condition Flowchart on Reddit](https://www.reddit.com/r/SCPSecretLab/comments/gzyl0t/win_condition_flowchart/)
 
 # Upcoming Features:
 - Nothing.
