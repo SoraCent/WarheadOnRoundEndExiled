@@ -35,6 +35,9 @@ warhead_on_round_end_exiled:
 
 How to achieve each Ending you can see this Flowchart: [Win Condition Flowchart on Reddit](https://www.reddit.com/r/SCPSecretLab/comments/gzyl0t/win_condition_flowchart/)
 
+# Credits:
+- [Beryl](https://github.com/SebasCapo) (Helping alot with the EventHandlers and more)
+
 # Upcoming Features:
 - Nothing.
 
