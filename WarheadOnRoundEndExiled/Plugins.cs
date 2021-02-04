@@ -1,4 +1,5 @@
-﻿using Exiled.API.Features;
+﻿using System;
+using Exiled.API.Features;
 
 namespace WarheadOnRoundEndExiled
 {
@@ -6,11 +7,13 @@ namespace WarheadOnRoundEndExiled
     {
         public override string Name => nameof(WarheadOnRoundEndExiled);
         public override string Author => "SoraCént";
+        public override Version Version => new Version(1, 2, 1);
+        public override Version RequiredExiledVersion => new Version(2, 1, 28);
+
         public EventHandler Handler;
 
         public override void OnEnabled()
         {
-            Log.Info("WarheadOnRoundEndExiled Plugin Activated!");
             Handler = new EventHandler(this);
             Exiled.Events.Handlers.Server.RoundEnded += Handler.OnEndingRoundEvent;
         }
