@@ -20,12 +20,9 @@ namespace WarheadOnRoundEndExiled
 
             if(plugin.Config.CustomEndConditionEnabled)
             {
-                foreach (string FractionsEndCondition in plugin.Config.FractionsEndCondition)
+                if(plugin.Config.FractionsEndCondition.Contains(ev.LeadingTeam))
                 {
-                    if (FractionsEndCondition.Contains(ev.LeadingTeam.ToString()))
-                    {
-                        StartWarhead(ev);
-                    }
+                    StartWarhead(ev);
                 }
             } 
             else

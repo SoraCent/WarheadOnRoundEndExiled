@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel;
+using Exiled.API.Enums;
 
 namespace WarheadOnRoundEndExiled
 {
@@ -19,12 +20,12 @@ namespace WarheadOnRoundEndExiled
         public bool CustomEndConditionEnabled { get; set; } = false;
 
         [Description("List of EndConditions: FacilityForces = MTF Won, ChaosInsurgency = D-Boys Won, Anomalies = SCPs Won, Draw = It's a Draw. If you set all, the warhead always explodes after round.")]
-        public List<string> FractionsEndCondition { get; set; } = new List<string> 
+        public List<LeadingTeam> FractionsEndCondition { get; set; } = new List<LeadingTeam> 
         {
-        "FacilityForces",
-        "ChaosInsurgency",
-        "Anomalies",
-        "Draw"
+        LeadingTeam.FacilityForces,
+        LeadingTeam.ChaosInsurgency,
+        LeadingTeam.Anomalies,
+        LeadingTeam.Draw
         };
     }
 }
