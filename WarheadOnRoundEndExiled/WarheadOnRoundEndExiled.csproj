@@ -33,18 +33,18 @@
   <ItemGroup>
     <Reference Include="Assembly-CSharp, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\Downloads\Exiled(9)\Assembly-CSharp.dll</HintPath>
+      <HintPath>E:\LocalData\EXILED\Exiled-2.8.0\Assembly-CSharp.dll</HintPath>
     </Reference>
     <Reference Include="Assembly-CSharp-firstpass">
       <HintPath>E:\Program Files (x86)\Steam\steamapps\common\SCP Secret Laboratory Dedicated Server\SCPSL_Data\Managed\Assembly-CSharp-firstpass.dll</HintPath>
     </Reference>
-    <Reference Include="Exiled.API, Version=2.1.6.0, Culture=neutral, processorArchitecture=AMD64">
+    <Reference Include="Exiled.API, Version=2.1.21.0, Culture=neutral, processorArchitecture=AMD64">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\Downloads\Exiled(9)\EXILED\Plugins\dependencies\Exiled.API.dll</HintPath>
+      <HintPath>E:\LocalData\EXILED\Exiled-2.8.0\EXILED\Plugins\dependencies\Exiled.API.dll</HintPath>
     </Reference>
-    <Reference Include="Exiled.Events, Version=2.1.6.0, Culture=neutral, processorArchitecture=AMD64">
+    <Reference Include="Exiled.Events, Version=2.1.21.0, Culture=neutral, processorArchitecture=AMD64">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\Downloads\Exiled(9)\EXILED\Plugins\Exiled.Events.dll</HintPath>
+      <HintPath>E:\LocalData\EXILED\Exiled-2.8.0\EXILED\Plugins\Exiled.Events.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

@@ -16,27 +16,27 @@ namespace WarheadOnRoundEndExiled
 
         public void OnEndingRoundEvent(RoundEndedEventArgs ev)
         {
-            if (!Warhead.IsDetonated)
+            if (Warhead.IsDetonated) return;
+
+            if(plugin.Config.CustomEndConditionEnabled)
             {
-                if(plugin.Config.CustomEndConditionEnabled)
+                foreach (string FractionsEndCondition in plugin.Config.FractionsEndCondition)
                 {
-                    foreach (string FractionsEndCondition in plugin.Config.FractionsEndCondition)
+                    if (FractionsEndCondition.Contains(ev.LeadingTeam.ToString()))
                     {
-                        if (FractionsEndCondition.Contains(ev.LeadingTeam.ToString()))
-                        {
-                            StartWarhead(ev);
-                        }
+                        StartWarhead(ev);
                     }
-                } else
-                {
-                    StartWarhead(ev);
                 }
+            } 
+            else
+            {
+                StartWarhead(ev);
             }
         }
 
         public void StartWarhead(RoundEndedEventArgs ev)
         {
-            UInt32 DetonationTimer = plugin.Config.DetonationTimer;
+            uint DetonationTimer = plugin.Config.DetonationTimer;
             // Checks if the DetonationTimer set in the Config is 0 or lower for instant Detonate.
             if (DetonationTimer <= 0)
             {
