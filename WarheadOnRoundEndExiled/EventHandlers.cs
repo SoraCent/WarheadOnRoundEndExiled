@@ -20,7 +20,7 @@ namespace WarheadOnRoundEndExiled
 
             if(plugin.Config.CustomEndConditionEnabled)
             {
-                if(plugin.Config.FractionsEndCondition.Contains(ev.LeadingTeam))
+                if(plugin.Config.FactionsEndCondition.Contains(ev.LeadingTeam))
                 {
                     StartWarhead(ev);
                 }

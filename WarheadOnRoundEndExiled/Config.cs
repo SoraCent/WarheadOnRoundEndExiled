@@ -20,7 +20,7 @@ namespace WarheadOnRoundEndExiled
         public bool CustomEndConditionEnabled { get; set; } = false;
 
         [Description("List of EndConditions: FacilityForces = MTF Won, ChaosInsurgency = D-Boys Won, Anomalies = SCPs Won, Draw = It's a Draw. If you set all, the warhead always explodes after round.")]
-        public List<LeadingTeam> FractionsEndCondition { get; set; } = new List<LeadingTeam> 
+        public List<LeadingTeam> FactionsEndCondition { get; set; } = new List<LeadingTeam> 
         {
         LeadingTeam.FacilityForces,
         LeadingTeam.ChaosInsurgency,
