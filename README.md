@@ -9,7 +9,7 @@ It's a Simple SCP:SL Plugin for Exiled that activating the Alpha Warhead when th
 | IsEnabled | bool | Is the Plugin enabled | true |
 | detonation_timer | uint | Detonation Time | 5 |
 | CustomEndConditionEnabled | bool | Should Custom End Condition be enabled | false |
-| FractionsEndCondition | List<string> | List of End Conditions | FacilityForces, ChaosInsurgency, Anomalies, Draw |
+| FactionsEndCondition | List<LeadingTeam> | List of End Conditions | FacilityForces, ChaosInsurgency, Anomalies, Draw |
 
 ## Default Config
 ```yml
@@ -37,6 +37,7 @@ How to achieve each Ending you can see this Flowchart: [Win Condition Flowchart 
 
 # Credits:
 - [Beryl](https://github.com/SebasCapo) (Helping alot with the EventHandlers and more)
+- [BuildBoy12](https://github.com/BuildBoy12) (Helping with problems in my Code and how to fix them)
 
 # Upcoming Features:
 - Nothing.
