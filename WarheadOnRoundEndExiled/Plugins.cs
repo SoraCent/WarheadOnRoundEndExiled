@@ -6,8 +6,8 @@ namespace WarheadOnRoundEndExiled
     public class WarheadOnRoundEndExiled : Plugin<Config>
     {
         public override string Author => "SoraCént";
-        public override Version Version => new Version(1, 3, 2);
-        public override Version RequiredExiledVersion => new Version(2, 8, 0);
+        public override Version Version => new Version(2, 0, 0);
+        public override Version RequiredExiledVersion => new Version(3, 0, 0);
 
         public EventHandler Handler;
 
