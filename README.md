@@ -1,4 +1,4 @@
-[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)[![forthebadge](https://forthebadge.com/images/badges/check-it-out.svg)](https://forthebadge.com)[![forthebadge](https://forthebadge.com/images/badges/made-with-c-sharp.svg)](https://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)[![forthebadge](https://forthebadge.com/images/badges/check-it-out.svg)](https://forthebadge.com)[![forthebadge](https://forthebadge.com/images/badges/made-with-c-sharp.svg)](https://forthebadge.com)[![Github All Releases](https://img.shields.io/github/downloads/SoraCent/WarheadOnRoundEndExiled/total?color=blue&style=for-the-badge)]()
 
 # WarheadOnRoundEndExiled
 It's a Simple SCP:SL Plugin for Exiled that activating the Alpha Warhead when the Round is over and the set Team has Won the Round. The Alpha Warhead Detonates in the Time set in the Config.
